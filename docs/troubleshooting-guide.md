@@ -1,5 +1,3 @@
-# Trouble Shooting Guide
-
 
 ## Category: Timeout Issues
 
