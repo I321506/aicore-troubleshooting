@@ -1,13 +1,16 @@
 title: AI Core Troubleshooting
-description: Guides and tutorials for SAP AI Core
-theme: minima
+description: Guides and troubleshooting tips for SAP AI Core
+remote_theme: just-the-docs/just-the-docs
 url: ""
 
-nav:
-  - title: Home
-    url: /
-  - title: Tutorials
-    url: /docs/
+color_scheme: light
+
+aux_links:
+  "GitHub":
+    - "https://github.com/SmitaNaik05/aicore-troubleshooting"
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-relative-links
+
+search_enabled: true

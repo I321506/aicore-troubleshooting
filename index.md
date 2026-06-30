@@ -1,16 +1,17 @@
 ---
 layout: home
-title: AI Core Troubleshooting
+title: Home
+nav_order: 1
 ---
 
 # AI Core Troubleshooting
 
 Welcome to the SAP AI Core troubleshooting guides.
 
-## Tutorials
+Browse the topics using the **left navigation bar**, or use the **search box** at the top.
 
-- [AI Core Orchestration with Grounding](docs/troubleshooting-guide)
+## Categories
 
-## About
-
-This site contains step-by-step guides and troubleshooting tips for working with SAP AI Core.
+- [Timeout Issues](docs/troubleshooting-guide#category-timeout-issues)
+- [Rate Limit Issues](docs/troubleshooting-guide#category-rate-limit)
+- [AI Core Orchestration with Grounding](docs/ai-core-orchestration-with-grounding)
