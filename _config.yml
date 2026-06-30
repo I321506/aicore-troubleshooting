@@ -1,0 +1,13 @@
+title: AI Core Troubleshooting
+description: Guides and tutorials for SAP AI Core
+theme: minima
+url: ""
+
+nav:
+  - title: Home
+    url: /
+  - title: Tutorials
+    url: /docs/
+
+plugins:
+  - jekyll-relative-links
