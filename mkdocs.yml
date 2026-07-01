@@ -1,0 +1,72 @@
+site_name: AI Core Troubleshooting
+site_description: Troubleshooting guides and tutorials for SAP AI Core
+site_url: https://SmitaNaik05.github.io/aicore-troubleshooting
+repo_url: https://github.com/SmitaNaik05/aicore-troubleshooting
+repo_name: aicore-troubleshooting
+docs_dir: mkdocs-docs
+site_dir: site
+
+hooks:
+  - hooks.py
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Troubleshooting Guide:
+      - troubleshooting/index.md
+      - Timeout Issues:
+          - troubleshooting/timeout/index.md
+          - LLM Requests Timing Out Silently: troubleshooting/timeout/llm-requests-timing-out.md
+          - Orchestration Model Timeout and 503 Errors: troubleshooting/timeout/orchestration-model-timeout.md
+      - Rate Limit Issues:
+          - troubleshooting/rate-limit/index.md
+          - Rate Limited at ~100 RPM Despite 2,000 RPM Quota: troubleshooting/rate-limit/rate-limited-100rpm.md
+          - Unable to Increase Rate Limit (Error 100401): troubleshooting/rate-limit/unable-to-increase-rate-limit.md
+      - Usage Limit Issues:
+          - troubleshooting/usage-limit/index.md
+          - Copilot Usage Limits Consumed Faster: troubleshooting/usage-limit/copilot-usage-limits.md
+  - Orchestration with Grounding: orchestration/index.md
