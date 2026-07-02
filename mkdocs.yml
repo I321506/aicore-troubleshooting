@@ -54,13 +54,18 @@ markdown_extensions:
   - toc:
       permalink: true
 
+# nav:
+#   - Home: index.md
+#   - Troubleshooting Guide:
+#       - Overview: troubleshooting/index.md
+#       - Timeout Issues:
+#           - LLM Requests Timing Out Silently: troubleshooting/llm-requests-timing-out.md
+#       - Rate Limit Issues:
+#           - Rate Limited at ~100 RPM Despite 2,000 RPM Quota: troubleshooting/rate-limit-issues.md
+#   - Orchestration with Grounding: orchestration/index.md
 nav:
   - Home: index.md
   - Troubleshooting Guide:
       - Overview: troubleshooting/index.md
-      - Timeout Issues:
-          - LLM Requests Timing Out Silently: troubleshooting/llm-requests-timing-out.md
-      - Rate Limit Issues:
-          - Rate Limited at ~100 RPM Despite 2,000 RPM Quota: troubleshooting/rate-limited-100rpm.md
-          - Unable to Increase Rate Limit (Error 100401): troubleshooting/unable-to-increase-rate-limit.md
-  - Orchestration with Grounding: orchestration/index.md
+      - Timeout Issues: troubleshooting/llm-requests-timing-out.md
+      - Rate Limit Issues: troubleshooting/rate-limit-issues.md
