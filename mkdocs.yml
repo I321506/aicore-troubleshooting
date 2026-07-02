@@ -59,14 +59,14 @@ nav:
   - Troubleshooting Guide:
       - troubleshooting/index.md
       - Timeout Issues:
-          - troubleshooting/timeout/index.md
+          - troubleshooting/llm-requests-timing-out.md
           - LLM Requests Timing Out Silently: troubleshooting/timeout/llm-requests-timing-out.md
           - Orchestration Model Timeout and 503 Errors: troubleshooting/timeout/orchestration-model-timeout.md
       - Rate Limit Issues:
           - troubleshooting/rate-limit/index.md
-          - Rate Limited at ~100 RPM Despite 2,000 RPM Quota: troubleshooting/rate-limit/rate-limited-100rpm.md
-          - Unable to Increase Rate Limit (Error 100401): troubleshooting/rate-limit/unable-to-increase-rate-limit.md
+          - Rate Limited at ~100 RPM Despite 2,000 RPM Quota: troubleshooting/rate-limited-100rpm.md
+          - Unable to Increase Rate Limit (Error 100401): troubleshooting/rate-limited-100rpm.md
       - Usage Limit Issues:
-          - troubleshooting/usage-limit/index.md
-          - Copilot Usage Limits Consumed Faster: troubleshooting/usage-limit/copilot-usage-limits.md
+          - troubleshooting/unable-to-increase-rate-limit.md
+          - Copilot Usage Limits Consumed Faster: troubleshooting/unable-to-increase-rate-limit.md
   - Orchestration with Grounding: orchestration/index.md
