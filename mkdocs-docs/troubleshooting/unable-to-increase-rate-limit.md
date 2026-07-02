@@ -1,71 +1,16 @@
-# Other issues
+# Unable to Increase Rate Limit (Error 100401)
 
-## LLM Requests Timing Out Silently
+!!! warning "Symptoms"
+    - Rate limit increase requests fail with error code `100401` and HTTP status 400
+    - Error message: `"Error occurred while calling AI API"`
 
-### 1. Symptoms
+!!! info "Possible Causes"
+    - Insufficient permissions to modify rate limit settings
+    - Rate limit configuration not yet propagated to the backend
+    - Conflict with an existing pending request
 
-    - AI Core LLM requests time out intermittently (approximately every 10-15 calls)
-    - Timeouts are silent (no error messages returned)
-    - Response times are significantly longer than expected
-    - Issue observed across multiple models (Claude Sonnet 4.6, Claude Haiku 4.5, GPT 5.4)
-
-### 2. Possible Causes
-
-    - Network latency between client region (e.g., Singapore) and AI Core landscape
-    - Backend service overload or resource contention
-    - Intermittent connectivity issues between AI Core and upstream LLM providers
-
-### 3. Recommended Actions
-
-    1. Implement client-side timeout handling with appropriate retry logic
-    2. Check the AI Core landscape status for any ongoing incidents
-    3. Consider switching to a geographically closer AI Core landscape if available
-    4. Monitor and log request durations to identify patterns
-    5. Contact AI Core support with tenant ID, resource group, and timestamps of affected requests
-
-
-## LLM Requests Timing Out Silently
-
-### 1. Symptoms
-
-    - AI Core LLM requests time out intermittently (approximately every 10-15 calls)
-    - Timeouts are silent (no error messages returned)
-    - Response times are significantly longer than expected
-    - Issue observed across multiple models (Claude Sonnet 4.6, Claude Haiku 4.5, GPT 5.4)
-
-### 2. Possible Causes
-
-    - Network latency between client region (e.g., Singapore) and AI Core landscape
-    - Backend service overload or resource contention
-    - Intermittent connectivity issues between AI Core and upstream LLM providers
-
-### 3. Recommended Actions
-
-    1. Implement client-side timeout handling with appropriate retry logic
-    2. Check the AI Core landscape status for any ongoing incidents
-    3. Consider switching to a geographically closer AI Core landscape if available
-    4. Monitor and log request durations to identify patterns
-    5. Contact AI Core support with tenant ID, resource group, and timestamps of affected requests
-
-## LLM Requests Timing Out Silently
-
-### 1. Symptoms
-
-    - AI Core LLM requests time out intermittently (approximately every 10-15 calls)
-    - Timeouts are silent (no error messages returned)
-    - Response times are significantly longer than expected
-    - Issue observed across multiple models (Claude Sonnet 4.6, Claude Haiku 4.5, GPT 5.4)
-
-### 2. Possible Causes
-
-    - Network latency between client region (e.g., Singapore) and AI Core landscape
-    - Backend service overload or resource contention
-    - Intermittent connectivity issues between AI Core and upstream LLM providers
-
-### 3. Recommended Actions
-
-    1. Implement client-side timeout handling with appropriate retry logic
-    2. Check the AI Core landscape status for any ongoing incidents
-    3. Consider switching to a geographically closer AI Core landscape if available
-    4. Monitor and log request durations to identify patterns
-    5. Contact AI Core support with tenant ID, resource group, and timestamps of affected requests
+!!! tip "Recommended Actions"
+    1. Verify you have admin permissions on the AI Core tenant
+    2. Wait and retry the request after a few minutes
+    3. Cancel any pending quota increase requests before submitting a new one
+    4. Contact AI Core support with the full error response and tenant ID
