@@ -60,8 +60,8 @@ nav:
       - troubleshooting/index.md
       - Timeout Issues:
           - troubleshooting/llm-requests-timing-out.md
-          - LLM Requests Timing Out Silently: troubleshooting/timeout/llm-requests-timing-out.md
-          - Orchestration Model Timeout and 503 Errors: troubleshooting/timeout/orchestration-model-timeout.md
+          - LLM Requests Timing Out Silently: troubleshooting/llm-requests-timing-out.md
+          - Orchestration Model Timeout and 503 Errors: troubleshooting/orchestration-model-timeout.md
       - Rate Limit Issues:
           - troubleshooting/rate-limit/index.md
           - Rate Limited at ~100 RPM Despite 2,000 RPM Quota: troubleshooting/rate-limited-100rpm.md
