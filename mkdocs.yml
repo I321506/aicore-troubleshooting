@@ -57,7 +57,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Troubleshooting Guide:
-      - troubleshooting/index.md
+      - Overview: troubleshooting/index.md
       - Timeout Issues:
           - LLM Requests Timing Out Silently: troubleshooting/llm-requests-timing-out.md
       - Rate Limit Issues:
