@@ -12,8 +12,8 @@ Browse the categories below to find solutions for common SAP AI Core issues.
 
     Issues related to request rate limiting and quota configuration.
 
-- **[Usage Limit Issues](unable-to-increase-rate-limit.md)**
+- **[Unable to Increase Rate Limit](unable-to-increase-rate-limit.md)**
 
-    Issues related to usage quotas and billing model changes.
+    Error 100401 when attempting to change rate limit settings.
 
 </div>

@@ -59,9 +59,8 @@ nav:
   - Troubleshooting Guide:
       - troubleshooting/index.md
       - Timeout Issues:
-          - troubleshooting/llm-requests-timing-out.md
+          - LLM Requests Timing Out Silently: troubleshooting/llm-requests-timing-out.md
       - Rate Limit Issues:
-          - troubleshooting/rate-limit/index.md
-      - Usage Limit Issues:
-          - troubleshooting/unable-to-increase-rate-limit.md
+          - Rate Limited at ~100 RPM Despite 2,000 RPM Quota: troubleshooting/rate-limited-100rpm.md
+          - Unable to Increase Rate Limit (Error 100401): troubleshooting/unable-to-increase-rate-limit.md
   - Orchestration with Grounding: orchestration/index.md
