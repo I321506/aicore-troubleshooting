@@ -18,4 +18,8 @@ Troubleshooting guides and solutions for common SAP AI Core issues — covering 
 
     HTTP 429 errors, quota mismatches, rate limit increase failures.
 
+- :material-speedometer-slow: **[Onboarding & Authentication Issues](troubleshooting/authentication_onboarding.md)**
+
+    Onboarding & Authentication related Issues.
+
 </div>

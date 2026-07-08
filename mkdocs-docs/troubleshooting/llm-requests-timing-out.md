@@ -20,7 +20,6 @@
     4. Monitor and log request durations to identify patterns
     5. Contact AI Core support with tenant ID, resource group, and timestamps of affected requests
 
----
 
 ## Orchestration Model Timeout and 503 Errors
 
@@ -42,3 +41,37 @@
     3. Try reducing request payload size or complexity
     4. Consider setting a shorter client-side timeout with retries rather than a single long timeout
     5. Contact AI Core support with deployment ID and timestamps of failures
+
+
+## AI Core Deployment Timeout During Inference
+
+===  "Symptoms"
+- Inference job takes around 8 minutes to run
+- Deployment times out before inference job completes
+
+===  "Possible Causes"
+- Default deployment timeout is shorter than the inference processing time
+- No configurable timeout extension available
+
+===  "Recommended Actions"
+- Contact AI Core support with tenant ID and deployment ID
+- Provide details on how long the timeout occurs
+- Inquire about options to increase deployment timeout
+
+
+## Dataset API Timeouts and Empty Replies
+
+===  "Symptoms"
+- "Read from remote host: Operation timed out"
+- "error socket hang up"
+- "Empty reply from server"
+- Both GET and PUT operations failing
+
+===  "Possible Causes"
+- General latency issues in prod-eu landscape
+- Infrastructure issues affecting the internal production cluster
+
+===  "Recommended Actions"
+- Monitor landscape health status
+- Raise SNOW ticket for tracking
+- Retry operations once latency issues are resolved

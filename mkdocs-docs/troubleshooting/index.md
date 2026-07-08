@@ -16,4 +16,9 @@ Browse the categories below to find solutions for common SAP AI Core issues.
 
     Error 100401 when attempting to change rate limit settings.
 
+- **[Authentication and Onboarding Issues](authentication_onboarding.md)**
+
+    Error related to onboarding and authentication.
+    
+
 </div>
