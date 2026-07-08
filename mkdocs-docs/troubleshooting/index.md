@@ -8,7 +8,7 @@ Browse the categories below to find solutions for common SAP AI Core issues.
 
     Issues related to LLM request timeouts and 503 errors.
 
-- **[Rate Limit Issues](rate-limited-100rpm.md)**
+- **[Rate Limit Issues](rate-limit-issues.md)**
 
     Issues related to request rate limiting and quota configuration.
 
