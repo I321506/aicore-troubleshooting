@@ -6,12 +6,10 @@
     - "Jwt issuer is not configured" 401 error when trying to use GenAI endpoints
     - Cannot create AI Launchpad connection
     - Error appears intermittent
-
 === "Possible Causes"
     - Subaccount previously onboarded with a different plan (stale state)
     - Tenant warm-up period after provisioning
     - Istio/envoy configuration issues with JWT validation
-
 ===  "Recommended Actions"
     - Wait for tenant deprovisioning to complete before re-provisioning
     - Use service offboarding process before re-creating instances
@@ -24,13 +22,11 @@
     - "Forbidden" error when accessing AI Launchpad after resolving auth
     - "No Ai-API Connection" error in AI Launchpad
     - "No running deployment found for model gpt-4o-mini" when attempting inference
-
 === "Possible Causes"
     - Using client_id/client_secret from a deprecated BTP proxy service instead of the AI Core XSUAA instance
     - Missing role collections (e.g., `ailaunchpad_connections_editor`, `genai_administrator`, `experimenter`, `manager`)
     - Browser cache issues causing "Forbidden" after role assignment
     - No deployment created for the target model
-
 ===  "Recommended Actions"
     - Create an instance of AI Launchpad in BTP and configure the AI Core service key as a new connection
     - Assign required role collections: `ailaunchpad_connections_editor`, `genai_administrator`, `experimenter`, `manager`
@@ -41,10 +37,8 @@
 === "Symptoms"
     - Auth token request returns `{"error": "invalid_client", "error_description": "Bad credentials"}`
     - AI Core service binding created with `sap-internal` plan in Kubernetes environment
-
 === "Possible Causes"
     - Incorrect quoting in curl request (double quotes vs single quotes)
-
 ===  "Recommended Actions"
     - Change double quotes to single quotes in the curl request for auth token retrieval
 
@@ -53,10 +47,8 @@
     - "RBAC: Access Denied" error when sending API requests to Prompt Registry
     - Same operation works on SAP AI Core instances
     - Error also seen from AI Launchpad
-
 === "Possible Causes"
     - Prompt Registry does not support Content-as-a-Service (CaaS) instances yet
-
 ===  "Recommended Actions"
     - Use a standard SAP AI Core instance instead of CaaS for Prompt Registry operations
     - Wait for CaaS support to be added
