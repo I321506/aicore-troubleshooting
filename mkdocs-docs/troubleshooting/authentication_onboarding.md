@@ -1,6 +1,5 @@
 # Onboarding and Authentication related issues
 
-
 ## AI Core Provisioning Failures and "Jwt issuer is not configured" Error
 === "Symptoms"
     - 504 timeout errors during AI Core service provisioning
@@ -18,7 +17,6 @@
     - Use service offboarding process before re-creating instances
     - Retry operations during warm-up period (can last several hours)
     - Try provisioning in a different region (e.g., EU20 may have less load)
-
 
 ## Model Deployment Creation Not Possible – Invalid Credentials
 === "Symptoms"
@@ -39,7 +37,6 @@
     - Use an incognito window after assigning roles to avoid cache issues
     - Create a configuration and then a deployment before attempting inference
 
-
 ## Not Able to Call Gen AI Hub API – Bad Credentials (Curl Quoting)
 === "Symptoms"
     - Auth token request returns `{"error": "invalid_client", "error_description": "Bad credentials"}`
@@ -50,7 +47,6 @@
 
 ===  "Recommended Actions"
     - Change double quotes to single quotes in the curl request for auth token retrieval
-
 
 ## API Access to Prompt Registry Denied on CaaS Instance
 === "Symptoms"

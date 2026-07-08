@@ -19,7 +19,6 @@
     4. Use exponential backoff when receiving 429 responses
     5. Request expedited approval of pending quota increase requests with business justification
 
-
 ## 429 TooManyRequest Error for GenAI Hub / LLM Models
 === "Symptoms"
     - Error code 429 - 'TooManyRequest' when calling models (e.g., meta--llama3.1-70b-instruct, GPT-4o)
@@ -39,7 +38,6 @@
     - Wait for infrastructure team to resolve known issues
     - Monitor for updates from the support team
 
-
 ## Embedding Model Rate Limiting Triggered Prematurely
 === "Symptoms"
     - HTTP 429 Too Many Requests after only 177 requests in 45 seconds
@@ -57,7 +55,6 @@
     - Verify current tenant quota in GitOps configuration
     - Check whether rate limit is from AI Core or upstream Azure
 
-
 ## Rate Limit Quota Increase Request
 === "Symptoms"
     - Rate limiting errors when exceeding default RPM limits
@@ -72,7 +69,6 @@
     - Realistic increases are around 500 RPM per model per tenant
     - Implement retry logic with backoff using `x-ratelimit` response headers
 
-
 ## Deployment Limit of 65 Exceeded
 === "Symptoms"
     - Error: "Total number of deployments 66 exceeded the maximum limit of 65 for the tenant"
@@ -84,7 +80,6 @@
     - Raise a SNOW (ServiceNow) request with the expected number of deployments for tracking
     - Delete existing unused deployments before creating new ones
     - Request a permanent quota increase via the incident management process
-
 
 ## AI Core Deployment Replicas Quota Limit Blocking Releases
 === "Symptoms"

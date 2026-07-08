@@ -19,7 +19,6 @@
     4. Monitor and log request durations to identify patterns
     5. Contact AI Core support with tenant ID, resource group, and timestamps of affected requests
 
-
 ## Orchestration Model Timeout and 503 Errors
 ===  "Symptoms"
     - LLM calls via Orchestration Service encounter timeout errors (600-second timeout exceeded)
@@ -40,7 +39,6 @@
     4. Consider setting a shorter client-side timeout with retries rather than a single long timeout
     5. Contact AI Core support with deployment ID and timestamps of failures
 
-
 ## AI Core Deployment Timeout During Inference
 ===  "Symptoms"
     - Inference job takes around 8 minutes to run
@@ -54,7 +52,6 @@
     - Contact AI Core support with tenant ID and deployment ID
     - Provide details on how long the timeout occurs
     - Inquire about options to increase deployment timeout
-
 
 ## Dataset API Timeouts and Empty Replies
 ===  "Symptoms"
