@@ -2,7 +2,6 @@
 
 
 ## AI Core Provisioning Failures and "Jwt issuer is not configured" Error
-
 === "Symptoms"
     - 504 timeout errors during AI Core service provisioning
     - "Jwt issuer is not configured" 401 error when trying to use GenAI endpoints
@@ -22,7 +21,6 @@
 
 
 ## Model Deployment Creation Not Possible – Invalid Credentials
-
 === "Symptoms"
     - API returns `{'error': 'invalid_client', 'error_description': 'Bad credentials'}`
     - "Forbidden" error when accessing AI Launchpad after resolving auth
@@ -43,7 +41,6 @@
 
 
 ## Not Able to Call Gen AI Hub API – Bad Credentials (Curl Quoting)
-
 === "Symptoms"
     - Auth token request returns `{"error": "invalid_client", "error_description": "Bad credentials"}`
     - AI Core service binding created with `sap-internal` plan in Kubernetes environment
@@ -56,7 +53,6 @@
 
 
 ## API Access to Prompt Registry Denied on CaaS Instance
-
 === "Symptoms"
     - "RBAC: Access Denied" error when sending API requests to Prompt Registry
     - Same operation works on SAP AI Core instances

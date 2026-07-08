@@ -1,7 +1,6 @@
 # Rate Limit Issues
 
 ## Rate Limited at ~100 RPM Despite 2,000 RPM Configured Quota
-
 === "Symptoms"
     - HTTP 429 (Too Many Requests) errors returned when exceeding ~100 requests per minute
     - AI Core quota API reports 2,000 RPM but actual throughput is capped at ~100 RPM
@@ -22,7 +21,6 @@
 
 
 ## 429 TooManyRequest Error for GenAI Hub / LLM Models
-
 === "Symptoms"
     - Error code 429 - 'TooManyRequest' when calling models (e.g., meta--llama3.1-70b-instruct, GPT-4o)
     - All requests to GenAI hub failing with 429 errors
@@ -43,7 +41,6 @@
 
 
 ## Embedding Model Rate Limiting Triggered Prematurely
-
 === "Symptoms"
     - HTTP 429 Too Many Requests after only 177 requests in 45 seconds
     - Retries failing (14 retries in 15 seconds unsuccessful)
@@ -62,7 +59,6 @@
 
 
 ## Rate Limit Quota Increase Request
-
 === "Symptoms"
     - Rate limiting errors when exceeding default RPM limits
     - Request for 40,000 RPM denied as infeasible
@@ -78,7 +74,6 @@
 
 
 ## Deployment Limit of 65 Exceeded
-
 === "Symptoms"
     - Error: "Total number of deployments 66 exceeded the maximum limit of 65 for the tenant"
 
@@ -92,7 +87,6 @@
 
 
 ## AI Core Deployment Replicas Quota Limit Blocking Releases
-
 === "Symptoms"
     - Unable to scale deployments beyond 36 replicas
     - Blocking production deployments
