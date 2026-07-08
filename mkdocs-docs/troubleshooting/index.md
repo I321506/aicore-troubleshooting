@@ -15,6 +15,10 @@ Browse the categories below to find solutions for common SAP AI Core issues.
 - **[Authentication and Onboarding Issues](authentication_onboarding.md)**
 
     Error related to onboarding and authentication.
+
+- **[LLM Generic Issues](generic_llm_issues.md)**
+
+    LLM related generic issues
     
 
 </div>

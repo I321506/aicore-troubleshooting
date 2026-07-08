@@ -22,4 +22,8 @@ Troubleshooting guides and solutions for common SAP AI Core issues — covering 
 
     Onboarding & Authentication related Issues.
 
+- :material-speedometer-slow: **[LLM Generic Issues](troubleshooting/generic_llm_issues.md)**
+
+    LLM related Generic Issues.
+
 </div>

@@ -69,3 +69,4 @@ nav:
       - Timeout Issues: troubleshooting/llm-requests-timing-out.md
       - Rate Limit Issues: troubleshooting/rate-limit-issues.md
       - Onboarding & Authentication Issues: troubleshooting/authentication_onboarding.md
+      - Generic LLM Issues: troubleshooting/generic_llm_issues.md
