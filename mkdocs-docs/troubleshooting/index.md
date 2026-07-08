@@ -12,10 +12,6 @@ Browse the categories below to find solutions for common SAP AI Core issues.
 
     Issues related to request rate limiting and quota configuration.
 
-- **[Unable to Increase Rate Limit](unable-to-increase-rate-limit.md)**
-
-    Error 100401 when attempting to change rate limit settings.
-
 - **[Authentication and Onboarding Issues](authentication_onboarding.md)**
 
     Error related to onboarding and authentication.
