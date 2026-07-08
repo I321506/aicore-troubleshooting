@@ -61,11 +61,11 @@
     - Realistic increases are around 500 RPM per model per tenant
     - Implement retry logic with backoff using `x-ratelimit` response headers
 
-## Deployment Limit of 65 Exceeded
+## Deployment Limit Exceeded
 === "Symptoms"
-    - Error: "Total number of deployments 66 exceeded the maximum limit of 65 for the tenant"
+    - Error: "Total number of deployments X exceeded the maximum limit of Y for the tenant"
 === "Possible Causes"
-    - Tenant-level deployment quota set at 65 (quota is per tenant, not per resource group)
+    - Tenant-level deployment quota set at X (quota is per tenant, not per resource group)
 === "Recommended Actions"
     - Raise a SNOW (ServiceNow) request with the expected number of deployments for tracking
     - Delete existing unused deployments before creating new ones
@@ -81,4 +81,3 @@
 === "Recommended Actions"
     - Raise a request ticket to increase replica quotas for affected tenants
     - Check existing quota limits via API
-    - Note: de

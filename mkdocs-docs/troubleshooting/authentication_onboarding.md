@@ -33,7 +33,7 @@
     - Use an incognito window after assigning roles to avoid cache issues
     - Create a configuration and then a deployment before attempting inference
 
-## Not Able to Call Gen AI Hub API – Bad Credentials (Curl Quoting)
+## Not Able to Call Gen AI Hub API – Bad Credentials
 === "Symptoms"
     - Auth token request returns `{"error": "invalid_client", "error_description": "Bad credentials"}`
     - AI Core service binding created with `sap-internal` plan in Kubernetes environment
