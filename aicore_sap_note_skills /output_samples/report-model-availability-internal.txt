@@ -1,0 +1,2 @@
+Service plan mode: sap-internal — 21 of 113 models selected
+Region tables: 4 group(s), 21 models
