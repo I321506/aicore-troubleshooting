@@ -1,0 +1,72 @@
+# Model availability (SAP INTERNAL models only).
+# Source of truth: MLF gitops only. No SAP note / MCP dependency.
+
+note:
+  name: model-availability-internal
+  sap_note_id: "3437768"   # <-- internal note/doc id          # <-- real note/doc id
+
+sources:
+  global_yaml: services/aicore-llm-access/values/global.yaml
+  metadata_key: proxy.modelMetadatas
+  cluster_dir: services/aicore-llm-access/values/cluster-specific
+  connections_key: proxy.clusterSpecificModels
+  env_yaml_name: main.yaml
+
+filters:
+  service_plan_field: servicePlan
+  service_plan_default: sap-internal   # internal-only models (have sap-internal, not extended)
+  exclusive_against: extended
+
+table2:
+  connection_fields:
+    executable_id: provider
+    model: name
+    version: version
+  # Optional: dotted path inside a cluster connection entry that marks the
+  # model as ACCESSED from another region rather than hosted locally.
+  # Set this once the flag is identified in the repo, then the hosted /
+  # cross-region split becomes meaningful.
+  # cross_region_field: crossRegion
+  split_hosted_cross_region: false   # true -> two files: -hosted and -cross-region
+
+# Geographic grouping -> one table per group. Move a short name between
+# groups to re-group; nothing else changes.
+region_groups:
+  - name: "Asia Pacific and Japan (incl. India)"
+    regions: [AP10, AP11, AP12, AP20, AP21, AP30, JP10, JP31, IN30]
+  - name: "Europe"
+    regions: [EU01, EU02, EU10, EU11, EU20, EU30]
+  - name: "Americas"
+    regions: [US10, US21, US30, BR10, CA10]
+  - name: "Middle East"
+    regions: [SA30, AE01]
+
+regions:
+  - { short: AP10, folder: "aws.ap-southeast-2.prod-ap" }
+  - { short: AP11, folder: "aws.ap-southeast-1.prod-ap11" }
+  - { short: AP12, folder: "aws.ap-northeast-2.prod-ap12" }
+  - { short: AP20, folder: "az.australiaeast.prod-ap20" }
+  - { short: AP21, folder: "az.southeastasia.prod-ap21" }
+  - { short: AP30, folder: "gcp.australia-southeast1.prod-ap30" }
+  - { short: EU01, folder: "sapcc.eu-de-1.prod-eu01" }
+  - { short: EU02, folder: "sapcc.eu-de-1.prod-eu02" }
+  - { short: EU10, folder: "aws.eu-central-1.prod-eu" }
+  - { short: EU11, folder: "aws.eu-central-1.prodeuonly" }
+  - { short: EU20, folder: "az.westeurope.prod-eu20" }
+  - { short: EU30, folder: "gcp.europe-west3.prod-eu30" }
+  - { short: JP10, folder: "aws.ap-northeast-1.prod-jp" }
+  - { short: JP31, folder: "gcp.asia-northeast1.prod-jp31" }
+  - { short: US10, folder: "aws.us-east-1.prod-us" }
+  - { short: US21, folder: "az.eastus.prod-us21" }
+  - { short: US30, folder: "gcp.us-central1.prod-us30" }
+  - { short: SA30, folder: "gcp.me-central2.prod-sa30" }
+  - { short: AE01, folder: "sapcc.ap-ae-1.prod-ae01" }
+  - { short: IN30, folder: "gcp.asia-south1.prod-in30" }
+  - { short: BR10, folder: "aws.sa-east-1.prod-br10" }
+  - { short: CA10, folder: "aws.ca-central-1.prod-ca10" }
+
+output:
+  dir: output
+  name: model-availability-internal
+  title: "Generative AI model availability — SAP internal only"
+  formats: [md, csv, html]

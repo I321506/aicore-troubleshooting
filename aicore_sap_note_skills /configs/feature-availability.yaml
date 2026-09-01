@@ -1,0 +1,70 @@
+# GenAI feature availability per environment — SAP Help Portal content.
+# Flags come from the repo-root values/<cluster>/values.yaml `deploy:` map.
+# No SAP note / MCP dependency.
+
+note:
+  name: feature-availability
+  sap_note_id: "3660102"
+
+sources:
+  cluster_dir: values
+  env_yaml_name: values.yaml
+
+# Verified flag keys. Empty paths = no explicit flag exists -> cell stays blank
+# and is reported as undecided. Never substitute a similar-looking key:
+# contextRegistry != promptRegistryAPI; llmBatchServiceApi is the
+# customer-facing flag, the llmBatchServiceReconciler* keys are internal.
+features:
+  - { title: "Tabular AI", paths: [] }
+  - { title: "LLM Batch Service", paths: [deploy.llmBatchServiceApi] }
+  - { title: "Context Registry", paths: [deploy.contextRegistry] }
+  - { title: "Orchestration", paths: [deploy.llmOrchestration] }
+  - { title: "Feedback Service", paths: [deploy.feedbackService] }
+  - { title: "GenAI Optimizations", paths: [deploy.genAiOptimizations] }
+  - { title: "Agent Evaluation", paths: [deploy.agentEvaluation] }
+  - { title: "LLM Evaluation", paths: [deploy.genAiEvaluations, deploy.llmEvaluation] }
+  - { title: "Prompt Optimizer", paths: [deploy.genAiOptimizations, deploy.promptOptimizer] }
+  - { title: "Prompt Registry", paths: [deploy.promptRegistryAPI, deploy.promptRegistryK8sServer] }
+  - { title: "Grounding", paths: [] }
+  - { title: "Content Filtering", paths: [] }
+  - { title: "Anonymization / Pseudonymization", paths: [] }
+  - { title: "Translation", paths: [] }
+
+# One table per group. Move a short name between groups to re-group.
+region_groups:
+  - name: "Asia Pacific and Japan (incl. India)"
+    regions: [AP10, AP11, AP20, AP21, AP30, JP10, JP31, IN30]
+  - name: "Europe"
+    regions: [EU01, EU02, EU10, EU11, EU20, EU30]
+  - name: "Americas"
+    regions: [US10, US21, US30, BR10]
+  - name: "Middle East"
+    regions: [SA30, AE01]
+
+regions:
+  - { short: AP10, folder: "aws.ap-southeast-2.prod-ap" }
+  - { short: AP11, folder: "aws.ap-southeast-1.prod-ap11" }
+  - { short: AP20, folder: "az.australiaeast.prod-ap20" }
+  - { short: AP21, folder: "az.southeastasia.prod-ap21" }
+  - { short: AP30, folder: "gcp.australia-southeast1.prod-ap30" }
+  - { short: EU01, folder: "sapcc.eu-de-1.prod-eu01" }
+  - { short: EU02, folder: "sapcc.eu-de-1.prod-eu02" }
+  - { short: EU10, folder: "aws.eu-central-1.prod-eu" }
+  - { short: EU11, folder: "aws.eu-central-1.prodeuonly" }
+  - { short: EU20, folder: "az.westeurope.prod-eu20" }
+  - { short: EU30, folder: "gcp.europe-west3.prod-eu30" }
+  - { short: JP10, folder: "aws.ap-northeast-1.prod-jp" }
+  - { short: JP31, folder: "gcp.asia-northeast1.prod-jp31" }
+  - { short: US10, folder: "aws.us-east-1.prod-us" }
+  - { short: US21, folder: "az.eastus.prod-us21" }
+  - { short: US30, folder: "gcp.us-central1.prod-us30" }
+  - { short: SA30, folder: "gcp.me-central2.prod-sa30" }
+  - { short: AE01, folder: "sapcc.ap-ae-1.prod-ae01" }
+  - { short: IN30, folder: "gcp.asia-south1.prod-in30" }
+  - { short: BR10, folder: "aws.sa-east-1.prod-br10" }
+
+output:
+  dir: output
+  name: feature-availability
+  title: "GenAI feature availability per environment"
+  formats: [md, csv, html]

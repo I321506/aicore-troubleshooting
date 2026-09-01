@@ -1,0 +1,35 @@
+# Model pricing / metadata — this content stays in the SAP note.
+# Region availability lives in the separate availability configs.
+
+note:
+  name: model-pricing
+  sap_note_id: "3437767"          # <-- pricing note id
+
+sources:
+  global_yaml: services/aicore-llm-access/values/global.yaml
+  metadata_key: proxy.modelMetadatas
+
+filters:
+  service_plan_field: servicePlan
+  service_plan_default: extended
+  exclusive_against: extended
+
+table1:
+  columns:
+    - { title: "Executable ID (Access Type)", field: provider }
+    - { title: "Model", field: name }
+    - { title: "Version", field: version }
+    - title: "GenAI Input Tokens (for 1,000 Model Tokens)"
+      fields: [cost.inputCost, inputCost, pricing.inputCost, cost.input, costs.inputCost]
+    - title: "GenAI Output Tokens (for 1,000 Model Tokens)"
+      fields: [cost.outputCost, outputCost, pricing.outputCost, cost.output, costs.outputCost]
+    - title: "Available in Orchestration"
+      field: allowedScenarios
+      transform: contains:orchestration
+    - { title: "Retirement Date", field: retirementDate }
+
+output:
+  dir: output
+  name: model-pricing
+  title: "Generative AI model pricing and metadata"
+  formats: [md, csv, html]
