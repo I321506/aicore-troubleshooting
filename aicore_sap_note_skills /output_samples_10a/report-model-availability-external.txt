@@ -1,0 +1,2 @@
+Service plan mode: extended — 96 of 118 models selected
+Region tables: 3 group(s), 96 models
